@@ -30,12 +30,12 @@ public class Klass {
     }
 
     public void assignLeader(Student student) {
-        if (student.getKlass().getNumber()!=this.number){
-                System.out.print("It is not one of us.");
+        if (student.getKlass().getNumber() == this.number) {
+            this.leader = student;
         }
-        this.leader = student;
-
+        System.out.print("It is not one of us.\n");
     }
+
 
     public void appendMember(Student student) {
         student.setKlass(this);
