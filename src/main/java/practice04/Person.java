@@ -29,4 +29,8 @@ public class Person {
         return "My name is " + this.getName() + ". I am " + this.getAge() + " years old.";
     }
 
+    public String basicIntroduce() {
+        return "My name is " + this.getName() + ". I am " + this.getAge() + " years old.";
+    }
+
 }
