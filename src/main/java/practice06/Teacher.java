@@ -1,24 +1,16 @@
 package practice06;
 
-public class Teacher {
-    private String name;
-    private int age;
+public class Teacher extends Person {
     private int klass;
 
-    public String getName() {
-        return name;
+
+    public Teacher(String name, int age, int klass) {
+        super(name, age);
+        this.klass = klass;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
+    public Teacher(String name, int age) {
+        super(name, age);
     }
 
     public int getKlass() {
@@ -27,17 +19,6 @@ public class Teacher {
 
     public void setKlass(int klass) {
         this.klass = klass;
-    }
-
-    public Teacher(String name, int age, int klass) {
-        this.name = name;
-        this.age = age;
-        this.klass = klass;
-    }
-
-    public Teacher(String name, int age) {
-        this.name = name;
-        this.age = age;
     }
 
     public String introduce() {
