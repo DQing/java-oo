@@ -27,6 +27,26 @@ public class Person {
         this.age = age;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Person person = (Person) o;
+
+        if (id != person.id) return false;
+        if (age != person.age) return false;
+        return name != null ? name.equals(person.name) : person.name == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + age;
+        return result;
+    }
+
     public String introduce() {
         return "My name is " + this.getName() + ". I am " + this.getAge() + " years old.";
     }

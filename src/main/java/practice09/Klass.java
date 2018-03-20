@@ -30,11 +30,15 @@ public class Klass {
     }
 
     public void assignLeader(Student student) {
+        if (student.getKlass().getNumber()!=this.number){
+                System.out.print("It is not one of us.");
+        }
         this.leader = student;
 
     }
 
     public void appendMember(Student student) {
+        student.setKlass(this);
 
     }
 }
